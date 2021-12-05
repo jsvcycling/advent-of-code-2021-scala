@@ -8,4 +8,8 @@ lazy val root = (project in file("."))
     idePackagePrefix := Some("com.jsvcycling.aoc2021")
   )
 
+lazy val runDay1 = taskKey[Unit]("Run Day 1 Solutions")
+
+runDay1 := (Compile / runMain).toTask(" com.jsvcycling.aoc2021.Day1").value
+
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.3.0"
