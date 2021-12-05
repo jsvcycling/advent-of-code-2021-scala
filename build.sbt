@@ -9,7 +9,9 @@ lazy val root = (project in file("."))
   )
 
 lazy val runDay1 = taskKey[Unit]("Run Day 1 Solutions")
+lazy val runDay2 = taskKey[Unit]("Run Day 2 Solutions")
 
 runDay1 := (Compile / runMain).toTask(" com.jsvcycling.aoc2021.Day1").value
+runDay2 := (Compile / runMain).toTask(" com.jsvcycling.aoc2021.Day2").value
 
-libraryDependencies += "org.typelevel" %% "cats-core" % "2.3.0"
+libraryDependencies += "org.typelevel" %% "cats-core" % "2.7.0"
